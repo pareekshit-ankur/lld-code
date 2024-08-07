@@ -1,7 +1,6 @@
 package com.lld.code.system.cache;
 
 import java.util.Optional;
-import java.util.concurrent.TimeUnit;
 
 public interface Cache<K, V> {
     void put(K key, V value);
@@ -11,7 +10,4 @@ public interface Cache<K, V> {
     Optional<V> get(K key);
 
     void clear();
-
-    default void cleanUp() {
-    }
 }
